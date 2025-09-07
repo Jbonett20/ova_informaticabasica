@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+    <title>OVA_INFORMÁTICA BÁSICA</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./assets/dist/images/logoEsing.png"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:400,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Bootstrap -->
+    <link href="assets/dist/css/fixies/bootstrap.min.css" rel="stylesheet" />
+    <!-- Animate -->
+    <link href="assets/dist/css/fixies/animate.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="assets/dist/css/fixies/font-awesome.min.css" rel="stylesheet" />
+    <!-- Font Awesome Animated -->
+    <link
+      href="assets/dist/css/fixies/font-awesome-animation.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Animated -->
+    <link href="assets/dist/css/fixies/flexslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/dist/sass/introjs2.css" />
+    <!-- Main Style -->
+    <link rel="stylesheet" href="assets/dist/sass/base.css" />
+    <link rel="stylesheet" href="assets/dist/sass/demo.css" />
+
+    <link rel="stylesheet" href="assets/dist/sass/app.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/dist/css/contenido.css"
+    />
+  </head>
+  <body
+    style="
+      font-family: 'Roboto', sans-serif !important;
+      padding: 0px;
+      max-height: 750px;
+    "
+  >
+    <header
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #fffeff;
+      "
+    >
+      <div class="titulo-comando">
+        <img
+          class="img_header"
+          src="assets/dist/images/logoEsing.png"
+          alt="Contingencias Marítimas"
+          style="width: 80%"
+        />
+      </div>
+      <div
+        class="titulo-comando"
+        style="display: flex; align-items: center"
+        data-step="7"
+        data-title="Datos estudiante"
+        data-intro="En este lugar debe aparecerá un saludo.<br><p style='color: red'>También se encuentra el botón Salir, por favor no cierre el navegador, de clic en este elemento para retirarse de la lección.</p>"
+      >
+        <h5
+          class="text-uppercase strong text-primary"
+          style="color: #060606; margin: 5px"
+        >
+          <img
+            style="width: 20%; padding-right: 20px"
+            src="assets/dist/images/PersonajeFemenino_Completo.png"
+            alt="Usuario en Dimar Blackboard"
+          />
+          Bienvenido, estudiante
+        </h5>
+        <span
+          type="button"
+          class="close"
+          aria-label="Close"
+          style="margin-top: -8px"
+        >
+          <!--<span style="text-align: center; font-size: 10px">Salir</span>-->
+          <img
+            src="assets/dist/images/cerrar.png"
+            width="40px"
+            height="40px"
+            alt="salir"
+            title="SALIR"
+          />
+        </span>
+      </div>
+    </header>
+    <div
+      id="contenedor"
+      class="container"
+      style="
+        width: 100vw;
+        height: calc(100vh - 276px);
+        width: 100%;
+        overflow: hidden;
+        margin: 30px 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <!-- inicio recursos -->
+      <div class="div-noticias" id="DivRecursos">
+        <h2>RECURSOS</h2>
+        <div class="menu-tabs">
+          <ul class="tabs">
+            <li><a href="#videos">Videos</a></li>
+            <!-- <li><a href="#archivos">Archivos</a></li> -->
+          </ul>
+        </div>
+        <div class="div-news">
+          <div id="about" class="nano">
+            <div class="nano-content tab_content" id="videos">
+              <div class="div-noticia">
+                <span
+                  style="
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 13px;
+                  "
+                  >Director de la escuela de Ingenieros Militares</span
+                >
+                <a
+                  href="#videoDir"
+                  onclick="ReproVidDir('CoronelIBanez.mp4');return false;"
+                  ><img
+                    src="./assets/dist/images/directivos/ibanez.jpg"
+                    alt="img vaquiro"
+                    style="width: 200px; height: 100px"
+                /></a>
+                <h3>TC Norbey Roberto Ibáñez Rodríguez</h3>
+                <p>
+                  Como director, mi propósito es orientar todos los esfuerzos de
+                  nuestra unidad conforme a las estrategias de formación de la
+                  Escuela, asegurando que cada proceso y acción contribuya al
+                  cumplimiento de los objetivos institucionales. En la Escuela
+                  de Ingenieros Militares, trabajamos con firmeza y dedicación
+                  para garantizar el desarrollo profesional y operativo de
+                  nuestro personal
+                </p>
+              </div>
+              <div class="div-noticia">
+                <span
+                  style="
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 13px;
+                  "
+                  >Decano de la Escuela de Ingenieros y Oficial de Educación
+                  Superior</span
+                >
+                <a
+                  href="#videoDir"
+                  onclick="ReproVidDir('MyVaquiro.mp4');return false;"
+                  ><img
+                    src="./assets/dist/images/directivos/vaquiro.jpg"
+                    alt="img vaquiro"
+                    style="width: 200px; height: 100px"
+                /></a>
+                <h3>MY Judy Andrea Vaquiro Horta</h3>
+                <p>
+                  En la Escuela de Ingenieros, nuestro propósito es formar
+                  profesionales de alto rendimiento en ingeniería civil, con una
+                  sólida base académica, ética y técnica que les permita
+                  enfrentar y resolver los desafíos que se les presenten. Desde
+                  la dirección de esta escuela, me he enfocado en construir un
+                  modelo educativo integral que garantice tanto el desarrollo de
+                  habilidades técnicas como el fortalecimiento de valores
+                </p>
+              </div>
+              <div class="div-noticia">
+                <span
+                  style="
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 13px;
+                  "
+                  >Directora del programa de ingeniería civil a distancia</span
+                >
+                <a
+                  href="#videoDir"
+                  onclick="ReproVidDir('DraLucelly.mp4');return false;"
+                  ><img
+                    src="./assets/dist/images/directivos/lucelly.jpg"
+                    alt="SM Gerardo Velasco Molano"
+                    style="width: 200px; height: 100px"
+                /></a>
+                <h3>Dra Lucelly Elvira Cuadro Benavides</h3>
+                <p>
+                  Mi propósito como directora de este programa es liderar un
+                  modelo académico que combine excelencia en la enseñanza y
+                  pertinencia en el ámbito profesional. Nuestra misión es
+                  proporcionar una formación de calidad que prepare a los
+                  estudiantes para enfrentar los desafíos de la ingeniería civil
+                  en contextos tanto militares como civiles, siempre
+                  adaptándonos a los avances tecnológicos y las necesidades del
+                  mercado
+                </p>
+              </div>
+              <div class="div-noticia">
+                <span
+                  style="
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 13px;
+                  "
+                  >Asesor de comando de la Escuela de ingenieros militares</span
+                >
+                <a
+                  href="#videoDir"
+                  onclick="ReproVidDir('SmVeasco.mp4');return false;"
+                  ><img
+                    src="./assets/dist/images/directivos/velasco.jpg"
+                    alt="Profesor: SmVelasco"
+                    style="width: 200px; height: 100px"
+                /></a>
+                <h3>SM Gerardo Velasco Molano</h3>
+                <p>
+                  Mi rol como Asesor de Comando implica ser la voz de los
+                  Suboficiales y Soldados, y asegurar que sus necesidades y
+                  aspiraciones sean escuchadas y atendidas. A través de mis
+                  funciones, busco construir un ambiente de respeto,
+                  profesionalismo y apoyo, en sintonía con los objetivos de
+                  nuestro Ejército Nacional
+                </p>
+              </div>
+              <div class="div-noticia">
+                <span
+                  style="
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 13px;
+                  "
+                  >Secretario Académico</span
+                >
+                <a
+                  href="#videoDir"
+                  onclick="ReproVidDir('TenienteUpegui.mp4');return false;"
+                  ><img
+                    src="./assets/dist/images/directivos/upegui.jpg"
+                    alt="Profesor: Jorge Ignacio Blanco"
+                    style="width: 200px; height: 100px"
+                /></a>
+                <h3>TE Geider Johann Upegui</h3>
+                <p>
+                  Como notario designado por el Consejo Académico y cuyo
+                  nombramiento debe ser notificado al ICFES, mi propósito es
+                  asegurar la correcta validación de certificados de estudio,
+                  diplomas y constancias, manteniendo al día la base de datos
+                  académica y documental de nuestra institución
+                </p>
+              </div>
+            </div>
+            <!-- <div class="nano-content tab_content" id="archivos">
+                            <div class="div-noticia">
+                                <span>2014-10-08</span>
+                                <a><img src="http://dummyimage.com/120x120/000000/fff"></a>
+                                <h3>Aliquam tincidunt mauris eu risus.</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, elit maecenas est adipiscing amet interdum, dictum nec. Arcu
+                                    turpis, massa ac sed, diam est. Amet lorem vel a id, sed sed tincidunt non in proin,
+                                    duis augue excepturi varius est, amet vitae, nec eros odio. </p>
+                            </div>
+                        </div> -->
+          </div>
+        </div>
+        <a
+          class="btn-noticias"
+          data-step="4"
+          data-title="Recursos disponibles"
+          data-intro="En esta parte encontrará recursos que el docente haya publicado para reforzar la información, además encontrará los videos de presentación de la OVA"
+        >
+          <i class="fa fa-angle-left"></i>
+          <i class="fa fa-angle-right"></i>
+        </a>
+        <span class="bandera">
+          <div>RECURSOS</div>
+        </span>
+      </div>
+      <!-- fin recursos -->
+      <!-- .main container -->
+      <div
+        style="position: relative"
+        class="div-central"
+        data-step="1"
+        data-title="Contenido"
+        data-intro="En esta parte encontrará el contenido del curso, y los botones de control Adelante y Atrás para navegar en él."
+      >
+        <div
+          id="contenido"
+          style="height: calc(100% - 34px); padding: 0 20px; overflow-y: scroll"
+        ></div>
+        <!-- Recomendaciones-->
+        <div style="position: absolute; bottom: 0px; width: 100%">
+          <!-- Botones para navegar -->
+          <button
+            data-step="3"
+            data-title="Botón Atrás"
+            data-intro="Botón que permite volver a la diapositiva anterior."
+            type="button"
+            class="btn btn-dorado btn-anterior btnNavegacion"
+            onclick="cargarContenido('anterior')"
+            disabled="true"
+            style="float: left; border-radius: 0px 15px 0px 15px"
+          >
+            <span class="glyphicon glyphicon-arrow-left"></span>
+          </button>
+          <button
+            data-step="2"
+            data-title="Botón siguiente"
+            data-intro="Botón que me permite avanzar a la siguiente diapositiva."
+            type="button"
+            class="btn btn-dorado btn-siguiente btnNavegacion"
+            onclick="cargarContenido('siguiente')"
+            disabled="true"
+            style="float: right; border-radius: 15px 0px 15px 0px"
+          >
+            <span class="glyphicon glyphicon-arrow-right"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <audio id="audiointro" class="audiointro" style="display: none">
+      <source src="./assets/audio/contenido1.mp3" type="audio/mpeg" />
+    </audio>
+    <footer style="position: fixed; bottom: 0; width: 100%">
+      <div class="footer-container">
+        <div style="width: -webkit-fill-available">
+          <div
+            class="progress-container"
+            data-step="5"
+            data-intro="En esta parte podrá visualizar el avance del curso"
+            data-title="Barra de progreso"
+          >
+            <div
+              class="progress-bar progress-bar-striped active"
+              role="progressbar"
+              id="progress-bar"
+              aria-valuenow="25"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <h4>Avance del curso</h4>
+        </div>
+        <div class="col-md-1 no-padding" style="text-align: left">
+          <button
+            id="StopAudio"
+            class="btn white_audio"
+            style="
+              padding: 2px !important;
+              padding-left: 5px !important;
+              padding-right: 5px !important;
+              font-size: 10px;
+              color: black;
+            "
+          >
+            <i class="fa fa-pause"></i> Detener Audio
+          </button>
+
+          <button
+            id="PlayAudio"
+            class="btn white_audio"
+            style="
+              padding: 2px !important;
+              padding-left: 5px !important;
+              padding-right: 5px !important;
+              font-size: 10px;
+              color: black;
+            "
+          >
+            <i class="fa fa-play"></i> Reproducir Audio
+          </button>
+        </div>
+        <div
+          class="social-icons"
+          data-step="6"
+          data-intro="Botones de redes sociales"
+          data-title="Redes sociales"
+        >
+          <a
+            href="https://web.facebook.com/ejercitocolombia/"
+            target="_blank"
+            class="social-icon"
+          >
+            <img
+              src="./assets/dist/images/redessociales/facebook.png"
+              alt="Facebook"
+              width="30"
+              height="30"
+            />
+          </a>
+          <a
+            href="https://twitter.com/col_ejercito"
+            target="_blank"
+            class="social-icon"
+          >
+            <img
+              src="./assets/dist/images/redessociales/gorjeo.png"
+              alt="Twitter"
+              width="30"
+              height="30"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            class="social-icon"
+          >
+            <img
+              src="./assets/dist/images/redessociales/tik-tok.png"
+              alt="LinkedIn"
+              width="30"
+              height="30"
+            />
+          </a>
+          <a
+            href="https://www.youtube.com/@EjercitoNacionaldeColombia"
+            target="_blank"
+            class="social-icon"
+          >
+            <img
+              src="./assets/dist/images/redessociales/youtube.png"
+              alt="YouTube"
+              width="30"
+              height="30"
+            />
+          </a>
+          <a
+            href="https://open.spotify.com/show/5g4Gry1V6B2sLxobzNgRBl"
+            target="_blank"
+            class="social-icon"
+          >
+            <img
+              src="./assets/dist/images/redessociales/spotify.png"
+              alt="Spotify"
+              width="30"
+              height="30"
+            />
+          </a>
+          <a
+            href="https://www.tiktok.com/@ejercitonacionalcol?lang=es"
+            target="_blank"
+            class="social-icon"
+          >
+            <img
+              src="./assets/dist/images/redessociales/tik-tok.png"
+              alt="TikTok"
+              width="30"
+              height="30"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- INICIO MODAL FOTO-->
+    <div
+      id="ModalVideoDirectivo"
+      data-backdrop="static"
+      data-keyboard="false"
+      class="modal fade"
+      role="dialog"
+      onclick="pVideoDir();"
+    >
+      <div class="modal-dialog modal-md" style="width: 885px">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header" style="text-align: center">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-hidden="true"
+              onclick="pVideoDir();"
+            >
+              &times;
+            </button>
+            <h4 class="modal-title">
+              .: Video Directivo - Escuela de Ingenieros Militares del Ejército
+              de Colombia ESING :.
+            </h4>
+          </div>
+          <div class="modal-body">
+            <video id="VideoDirectivo" width="853" height="480" controls>
+              <!-- <source src="./assets/video/MyVaquiro.mp4" type="video/mp4"> -->
+              Su navegador no soporta videos
+            </video>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger btn-circle"
+              data-dismiss="modal"
+              onclick="pVideoDir();"
+            >
+              <i class="fa fa-times"></i>Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- inicio modal video introduccion -->
+    <div
+      id="ModalVideoIntroduccion"
+      data-backdrop="static"
+      data-keyboard="false"
+      class="modal fade"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-md" style="width: 885px">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header" style="text-align: center">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-hidden="true"
+              onclick="hideModalIntroduccion();"
+            >
+              &times;
+            </button>
+            <h4 class="modal-title">
+              .: Video de introducción - Escuela de Ingenieros Militares del
+              Ejército de Colombia ESING :.
+            </h4>
+          </div>
+          <div class="modal-body">
+            <video id="vidIntroduc" width="853" height="480" controls>
+              <source src="./assets/video/docente.mp4" type="video/mp4" />
+              Su navegador no soporta videos
+            </video>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger btn-circle"
+              data-dismiss="modal"
+              onclick="hideModalIntroduccion();"
+            >
+              <i class="fa fa-times"></i>Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fin modal video introduccion -->
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"
+    ></script>
+    <script src="assets/dist/js/fixies/jquery-1.11.1.min.js"></script>
+    <script src="assets/dist/js/fixies/jquery.flexslider-min.js"></script>
+    <script src="assets/dist/js/fixies/jquery.nanoscroller.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="assets/dist/js/fixies/custom.js"></script>
+    <script src="assets/dist/js/fixies/intro2.js"></script>
+
+    <script type="text/javascript" src="SCORM_API_wrapper.js"></script>
+    <script type="text/javascript" src="scorm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./assets/dist/js/contenido.js"></script>
+    <script>
+      introJs()
+        /* .setOption("dontShowAgain", true) */
+        .onbeforeexit(function () {
+          const lastClicked = document.activeElement;
+          if (
+            lastClicked?.classList.contains("introjs-donebutton") ||
+            lastClicked?.classList.contains("introjs-skipbutton")
+          ) {
+            $("#ModalVideoIntroduccion").modal();
+            $("#vidIntroduc").trigger("play");
+            return true;
+          }
+          return false;
+        })
+        .start();
+    </script>
+  </body>
+</html>

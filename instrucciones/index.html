@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es-co">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>CONTINGENCIAS MARÍTIMAS - DIRECCIÓN GENERAL MARÍTIMA</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="icono/favicon.ico">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link href="assets/dist/css/fixies/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate -->
+    <link href="assets/dist/css/fixies/animate.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="assets/dist/css/fixies/font-awesome.min.css" rel="stylesheet">
+    <!-- Font Awesome Animated -->
+    <link href="assets/dist/css/fixies/font-awesome-animation.min.css" rel="stylesheet">
+    <!-- Font Awesome Animated -->
+    <link href="assets/dist/css/fixies/flexslider.css" rel="stylesheet">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="assets/dist/sass/base.css">
+    <link rel="stylesheet" href="assets/dist/sass/demo.css">
+    <link rel="stylesheet" href="assets/dist/sass/introjs.css">
+    <link rel="stylesheet" href="assets/dist/sass/app.css">
+    <style type="text/css" media="screen">
+        .progreso {
+             width: 60%;
+             position: relative;
+             margin: 2px 0px 0px 50px;
+             border-radius: 25px;
+             background: rgba(255, 0, 0, 0.4);
+            }
+
+        .barra {
+             height: 5px;
+             background-color: #0093D1;
+             width: 0%;
+             border-radius: 25px;
+            }
+        .modal{
+                padding-left: 0px !important;
+            }
+
+            .thtabla{
+                width: 20%;
+            }
+            .centrar{
+                text-align: center;;
+            }
+    </style>
+</head>
+
+<body style="font-family: 'Roboto',sans-serif !important;">
+    <!-- <div class="loader"></div> -->
+
+    <div class="modal fullscreen-modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="overflow: hidden;">
+        <div>
+            <img src="assets/dist/images/portada.jpg" alt="Contingencias Marítimas" draggable="false" style="width: 100%;">
+        </div>
+        <!-- <div class="bounceInRight animated">
+            <img src="assets/dist/images/logo_nps2.png" alt="Contingencias Marítimas">
+        </div> -->
+        <div class="bounceInRight animated" id="tituloDerecha" style="position:absolute; top:0%; left:2%;font-size: 25px;text-align: center;color: #FFFFFF;padding-top:20px;">
+            <img  style="width: 100%" src="assets/dist/images/dimar.png" alt="Dirección General Marítima">
+        </div>
+        <div class="zoomIn animated" id="btnCentro" style="position:absolute; top:40%; right:43%; font-size: 35px; text-align: center;color: #FFFFFF;padding-top:20px; animation-delay: 1s;">
+            <!-- <a style="cursor: pointer;background:rgba(0, 0, 0, 0.8);padding:15px;border-radius: 15px;">INICIAR</a> -->
+            <a id="BtnInstrucciones" class="btn btn-info btn-lg" style="cursor: pointer;background:rgba(0, 0, 0, 0.8);padding:15px;border-radius: 15px; border-color: #0093D1;"><span class="glyphicon glyphicon-play-circle"></span> VER INSTRUCCIONES</a>
+            <!--<audio id="audio_incial">
+                <source src="assets/dist/audios/inicio.mp3" type="audio/mpeg">Your browser does not support the audio element.
+            </audio>-->
+        </div>
+        <span class="bounceInLeft animated" style="animation-delay: 0.5s;">
+            <span class="cuadroizquierda">
+                <p style="color: white;font-size: 25px;margin-left: 35px;padding-top:10px;">
+                    CONTINGENCIAS MARÍTIMAS - COMPONENTES DEL CURSO
+                    <audio controls autoplay style="width:3px;height:3px;" id="audiointro" class="audiointro">
+                        <source src="assets/audio/introduccion.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+            </span>
+        </span>
+        <span class="zoomIn animated" style="animation-delay: 0.5s;">
+            <span class="cuadroderecha">
+              <!--<center><img src="assets/dist/images/LogoIsuzu_Blanco.png" alt="Contingencias Marítimas" style="width: 200px;"></center>-->
+            </span>
+        </span>
+    </div>
+    <div id="contenedor" class="container" style="visibility: hidden;">
+        <header>
+            <!-- <div class="menu-top">
+            </div> -->
+            <div class="menu-principal">
+                <div class="titulo-comando"><img class="img_header" src="assets/dist/images/dimar.png" alt="Contingencias Marítimas" style="width: 80%;"></div>
+                <div class="titulo-comando" style="float: right; text-align: right; padding: 0px;" data-step="1" data-intro="<p>En este lugar debe aparecerá un saludo.<br></p><p style='color: red'>También se encuentra el botón Salir, por favor no cierre el navegador, de clic en este elemento para retirarse de la lección.</p>">
+                    <h5 class="text-uppercase strong text-primary" style="color: #FFFFFF; margin: 5px" ><img style="border-radius: 25px; width: 20%;padding-right:20px;" src="assets/dist/images/usuario.png" alt="Usuario en Dimar Blackboard"> Bienvenido, estudiante</h5>
+                     <span  type="button" class="close" aria-label="Close" style="margin-top: -8px;" >
+                        <!--<span style="text-align: center; font-size: 10px">Salir</span>-->
+                        <img src="assets/dist/images/puerta.png" width="40px" height="40px" alt="salir" title="SALIR">
+                    </span>
+                </div>
+            </div>
+        </header>
+        <!-- .main container -->
+            <div class="div-central" data-step="2" data-intro="En esta parte encontrará el contenido del curso, y los botones de control Adelante y Atrás para navegar en él.">
+                <div class="marginInterior" style="overflow : hidden; overflow-y : scroll;">
+                    <!--PERFIL DE CLIENTE Y APLICACIONES -->
+                    <div class="perfil_cliente" data-menu="li1">
+                    <!--<audio id="audio_introAyuda">
+                        <source src="assets/dist/audios/introAyuda.mp3" type="audio/mpeg">Your browser does not support the audio element.
+                    </audio>-->
+                    <!-- Tab -->
+                    <div id="tab-1" class="contenido visto activo zoomIn animated">
+                        <div class="row">
+                            <div class="col-md-12 text-center" style="color: #BE8300;"><h2 class="titulo"><span>|</span>OBJETIVO</h2></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10">
+                                <p style="text-align: center; margin-top: 10%; font-size: 23px">Encontrará en la parte baja el listado de los módulos en los que se encuentra distribuido el curso, y de forma activa el módulo en el cual se encuentra actualmente; servirá para que tenga una idea de lo que le falta para concluir tanto la lección como el material completo, sin embargo no podrá ir a otros módulos desde aquí.<br><br>Este es un contenido de muestra para dejar en claro las instrucciones pero no tiene interacción hacia la plataforma.</ber></p>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                    </div>
+                    <!-- /tab -->
+                </div>
+                <!-- /tab -->
+            </div>
+            <!-- Recomendaciones-->
+
+            <div style="position:absolute;  bottom: 0px; width: 100%; margin-left: -15px;">
+                <button type="button" class="btn btn-dorado btn-anterior" onclick="return false;" disabled="disabled" style="float: left; border-radius: 0px 15px 0px 15px;" data-step="4" data-intro="De click en este botón, para repasar información que no tenga clara, o ir hacia atrás en el contenido ya superado."><span class="glyphicon glyphicon-arrow-left"></span></button>
+                <button type="button" class="btn btn-dorado btn-siguiente" onclick="return false;" disabled="disabled" style="float: right; border-radius: 15px 0px 15px 0px;" data-step="3" data-intro="De click en este botón, para navegar hacia adelante en el contenido.""><span class="glyphicon glyphicon-arrow-right"></span></button>
+            </div>
+        </div>
+        <section>
+            <div id="slider" class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img src="assets/dist/images/interna.jpg" />
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <div id="carousel" class="flexslider">
+                <ul class="slides">
+                    <li id="li1" class="menu" data-tab="1" style="min-width: 200px !important;">
+                        <div class="progreso">
+                            <div class="barra" id="progress_perfil"></div>
+                        </div>
+                        <a><i class="material-icons"><img src="assets/dist/images/menu_1.png" alt="" style="width: 80%;margin-left:10%; margin-top:5%"></i>CONCEPTOS BÁSICOS</a>
+                    </li>
+                    <li id="li2" class="menu" data-tab="5" style="min-width: 220px !important;">
+                        <div class="progreso">
+                            <div class="barra" id="progress_porque"></div>
+                        </div>
+                        <a><i class="material-icons"><img src="assets/dist/images/menu_2.png" alt="" style="width: 80%;margin-left:10%; margin-top:5%"></i>CLASES DE CONTINGENCIAS / EMERGENCIAS</a>
+                    </li>
+                    <li id="li3" class="menu" data-tab="7" style="min-width: 200px !important;">
+                        <div class="progreso">
+                            <div class="barra" id="progress_identificacion"></div>
+                        </div>
+                        <a><i class="material-icons"><img src="assets/dist/images/menu_3.png" alt="" style="width: 80%;margin-left:10%; margin-top:5%"></i>LEGISLACIÓN APLICADA Y PREPARACIÓN</a>
+                    </li>
+                    <li id="li4" class="menu" data-tab="8" style="min-width: 200px !important;">
+                        <div class="progreso">
+                            <div class="barra" id="progress_especificacion"></div>
+                        </div>
+                        <a><i class="material-icons"><img src="assets/dist/images/menu_4.png" alt="" style="width: 80%;margin-left:10%; margin-top:5%"></i>EQUIPOS UTILIZADOS</a>
+                    </li>
+                    <li id="li5" class="menu" data-tab="23" style="min-width: 200px !important;">
+                        <div class="progreso">
+                            <div class="barra" id="progress_caracteristica"></div>
+                        </div>
+                        <a><i class="material-icons"><img src="assets/dist/images/menu_5.png" alt="" style="width: 80%;margin-left:10%; margin-top:5%"></i>PROCEDIMIENTOS PARA LA RESPUESTA</a>
+                    </li>
+                    <li id="li6" class="menu" data-tab="37" style="min-width: 200px !important;">
+                        <div class="progreso">
+                            <div class="barra" id="progress_recomendaciones"></div>
+                        </div>
+                        <a><i class="material-icons"><img src="assets/dist/images/menu_6.png" alt="" style="width: 80%;margin-left:10%; margin-top:5%"></i>ACTUACIÓN ANTE CONTINGENCIAS</a>
+                    </li>
+                </ul>
+                    <!--<a href="#" class="prev"><i class="fa fa-angle-left"></i></a><a href="#" class="next"><i class="fa fa-angle-right"></i></a>-->
+            </div>
+            <div class="div-footer">
+                <div class="row">
+                    <div class="col-md-12 no-padding">
+                        <div class="logos-footer">
+                            <img src="assets/dist/images/dimar.png" alt="Contingencias Marítimas" style="width: 200px;">
+                            <!-- <img src="assets/dist/images/Chevrolet_logo.png" alt=""> -->
+                            <audio style="width:1px;height:1px;" id="audio1" class="audio1">
+                                <source src="assets/audio/1.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <audio style="width:1px;height:1px;" id="audio2" class="audio2">
+                                <source src="assets/audio/2.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <audio style="width:1px;height:1px;" id="audio3" class="audio3">
+                                <source src="assets/audio/3.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <audio style="width:1px;height:1px;" id="audio4" class="audio4">
+                                <source src="assets/audio/4.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <audio style="width:1px;height:1px;" id="audio5" class="audio5">
+                                <source src="assets/audio/5.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- .main container -->
+    </div>
+    <!-- scripts 1 -->
+    <script src="assets/dist/js/fixies/jquery-1.11.1.min.js"></script>
+    <script src="assets/dist/js/fixies/jquery.flexslider-min.js"></script>
+    <script src="assets/dist/js/fixies/jquery.nanoscroller.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="assets/dist/js/fixies/custom.js"></script>
+    <script src="assets/dist/js/fixies/intro.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('#myModal').modal('toggle');
+            progress_perfil_cliente  = 100 / $(".perfil_cliente .contenido").length;
+            progress_porque_tener    = 100 / $(".porque_tener .contenido").length;
+            progress_identificacion  = 100 / $(".identificacion .contenido").length;
+            progress_especificacion  = 100 / $(".especificacion .contenido").length;
+            progress_caracteristicas = 100 / $(".caracteristicas .contenido").length;
+            progress_recomendaciones = 100 / $(".recomendaciones .contenido").length;
+        });
+
+        iniciar_curso = false;
+        $('#myModal').click(function(event) {
+            $('#myModal').modal('toggle');
+            $('#contenedor').css('visibility', 'visible');
+            //javascript:introJs().start();
+                var introjs = introJs().onexit( function(){
+                $('#audio_introAyuda').trigger('pause');
+                $('#audio_objetivo').trigger('play');
+                iniciar_curso = true;
+            } ).onskip( function(){
+                $('#audio_introAyuda').trigger('pause');
+                $('#audio_objetivo').trigger('play');
+                iniciar_curso = true;
+            } ).oncomplete( function(){
+                $('#audio_introAyuda').trigger('pause');
+                $('#audio_objetivo').trigger('play');
+                iniciar_curso = true;
+            } ).start();
+            $('#audio_incial').trigger('pause')
+            $('#audio_introAyuda').trigger('play')
+        });
+
+    </script>
+    <!-- .scripts 1 -->
+    <!--  -->
+    <!-- Also include jQueryUI -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assets/dist/js/intro.js"></script>
+</body>
+
+</html>

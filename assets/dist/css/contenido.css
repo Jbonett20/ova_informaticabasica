@@ -1,0 +1,124 @@
+/* redes sociales */
+footer {
+  background-color: #333; /* Fondo oscuro */
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.footer-container {
+  display: flex; /* Alineación horizontal */
+  justify-content: space-between; /* Espacio entre los elementos */
+  align-items: center; /* Alineación vertical centrada */
+}
+
+.progress-container {
+  width: 50%;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  /* margin: 20px 0; */
+  height: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  /* background: linear-gradient(90deg, #4caf50, #76c7c0); */
+  background-color: #2993d1 !important;
+  border-radius: 10px 0 0 10px;
+  transition: width 0.5s ease; /* Transición suave */
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 15px; /* Espaciado entre íconos */
+}
+
+.social-icons img {
+  filter: brightness(0) invert(1); /* Cambia el color de la imagen a blanco */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Agrega animación para hover */
+}
+
+.social-icons img:hover {
+  transform: scale(1.2); /* Agrandar íconos al pasar el mouse */
+}
+
+
+.modal {
+  padding-left: 0px !important;
+}
+
+.thtabla {
+  width: 20%;
+}
+
+.centrar {
+  text-align: center;
+}
+
+.progresoeste {
+    display: none;
+}
+
+#logofondo{
+    background-color: wheat;
+}
+
+#fondo{
+    background-color: rgb(211, 211, 211);
+}
+
+ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex; /* Permite alinear el contenido en fila */
+  align-items: center; /* Centra verticalmente */
+}
+
+.icono-izquierda {
+  margin-right: 10px; /* Agrega espacio entre la imagen y el texto */
+  width: 24px; /* Ajusta el tamaño de la imagen */
+  height: 24px;
+}
+
+/* footer */
+footer {
+  position: fixed;
+}
+
+.texto{
+  font-size: 3rem; 
+  line-height: 1.8;
+}
+.textoini{
+  font-size: 2rem; 
+  line-height: 1.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
