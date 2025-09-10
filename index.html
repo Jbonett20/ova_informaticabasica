@@ -99,9 +99,11 @@
             src="assets/dist/images/PersonajeFemenino_Completo.png"
             alt="Usuario en Dimar Blackboard"
           />
-          Bienvenido, estudiante
+          Bienvenido, 
+          <span id="NameUsr"></span>
         </h5>
         <span
+          id="btn_salir"
           type="button"
           class="close"
           aria-label="Close"
@@ -134,6 +136,7 @@
       "
     >
       <!-- inicio recursos -->
+       <input type="hidden" name="finalizado" id="finalizado" value="NO">
       <div class="div-noticias" id="DivRecursos">
         <h2>RECURSOS</h2>
         <div class="menu-tabs">
@@ -354,8 +357,11 @@
         </div>
       </div>
     </div>
-    <audio id="audiointro" class="audiointro" style="display: none">
+      <audio id="audiointro" class="audiointro" style="display: none">
       <source src="./assets/audio/contenido1.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="audiointro1" class="audiointro1" style="display: none">
+      <source src="./assets/audio/contenido0.mp3" type="audio/mpeg" />
     </audio>
     <footer style="position: fixed; bottom: 0; width: 100%">
       <div class="footer-container">
@@ -377,35 +383,32 @@
           </div>
           <h4>Avance del curso</h4>
         </div>
-        <div class="col-md-1 no-padding" style="text-align: left">
-          <button
-            id="StopAudio"
-            class="btn white_audio"
-            style="
-              padding: 2px !important;
-              padding-left: 5px !important;
-              padding-right: 5px !important;
-              font-size: 10px;
-              color: black;
-            "
-          >
-            <i class="fa fa-pause"></i> Detener Audio
-          </button>
+<div class="col-12 col-md-4">
+  <div class="d-flex align-items-center justify-content-start flex-nowrap gap-2">
 
-          <button
-            id="PlayAudio"
-            class="btn white_audio"
-            style="
-              padding: 2px !important;
-              padding-left: 5px !important;
-              padding-right: 5px !important;
-              font-size: 10px;
-              color: black;
-            "
-          >
-            <i class="fa fa-play"></i> Reproducir Audio
-          </button>
-        </div>
+<div class="dropup d-inline-block" data-display="static">
+  <!-- Botón detener audio -->
+  <button id="StopAudio" class="btn btn-outline-dark btn-sm d-flex align-items-center" style="color: #000 !important;">
+    <i class="fa fa-pause me-1"></i> Detener
+  </button>
+
+  <!-- Botón reproducir audio -->
+  <button id="PlayAudio" class="btn btn-outline-dark btn-sm d-flex align-items-center" style="color: #000 !important;">
+    <i class="fa fa-play me-1"></i> Reproducir
+  </button>
+
+  <!-- Botón velocidad -->
+
+  <button 
+    class="btn btn-sm"
+    id="velocidadAudio"
+    style="background-color:#e0e0e0; border:none; color:#000; display: none;">
+    1x
+  </button>
+
+</div>
+  </div>
+</div>
         <div
           class="social-icons"
           data-step="6"
@@ -488,102 +491,101 @@
       </div>
     </footer>
     <!-- INICIO MODAL FOTO-->
-    <div
-      id="ModalVideoDirectivo"
-      data-backdrop="static"
-      data-keyboard="false"
-      class="modal fade"
-      role="dialog"
-      onclick="pVideoDir();"
-    >
-      <div class="modal-dialog modal-md" style="width: 885px">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header" style="text-align: center">
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-hidden="true"
-              onclick="pVideoDir();"
-            >
-              &times;
-            </button>
-            <h4 class="modal-title">
-              .: Video Directivo - Escuela de Ingenieros Militares del Ejército
-              de Colombia ESING :.
-            </h4>
-          </div>
-          <div class="modal-body">
-            <video id="VideoDirectivo" width="853" height="480" controls>
-              <!-- <source src="./assets/video/MyVaquiro.mp4" type="video/mp4"> -->
-              Su navegador no soporta videos
-            </video>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-danger btn-circle"
-              data-dismiss="modal"
-              onclick="pVideoDir();"
-            >
-              <i class="fa fa-times"></i>Cerrar
-            </button>
-          </div>
+  <!-- Modal Video Directivo -->
+<div
+  id="ModalVideoDirectivo"
+  data-backdrop="static"
+  data-keyboard="false"
+  class="modal fade"
+  role="dialog"
+  onclick="pVideoDir();"
+>
+  <div class="modal-dialog modal-lg"> <!-- quitamos el width fijo -->
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-hidden="true"
+          onclick="pVideoDir();"
+        >
+          &times;
+        </button>
+        <h4 class="modal-title">
+          .: Video Directivo - Escuela de Ingenieros Militares del Ejército de Colombia ESING :.
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div class="video-container">
+          <video id="VideoDirectivo" controls>
+            <!-- <source src="./assets/video/MyVaquiro.mp4" type="video/mp4"> -->
+            Su navegador no soporta videos
+          </video>
         </div>
       </div>
-    </div>
-    <!-- inicio modal video introduccion -->
-    <div
-      id="ModalVideoIntroduccion"
-      data-backdrop="static"
-      data-keyboard="false"
-      class="modal fade"
-      role="dialog"
-    >
-      <div class="modal-dialog modal-md" style="width: 885px">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header" style="text-align: center">
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-hidden="true"
-              onclick="hideModalIntroduccion();"
-            >
-              &times;
-            </button>
-            <h4 class="modal-title">
-              .: Video de introducción - Escuela de Ingenieros Militares del
-              Ejército de Colombia ESING :.
-            </h4>
-          </div>
-          <div class="modal-body">
-            <video id="vidIntroduc" width="853" height="480" controls>
-              <source src="./assets/video/docente.mp4" type="video/mp4" />
-              Su navegador no soporta videos
-            </video>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-danger btn-circle"
-              data-dismiss="modal"
-              onclick="hideModalIntroduccion();"
-            >
-              <i class="fa fa-times"></i>Cerrar
-            </button>
-          </div>
-        </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-danger btn-circle"
+          data-dismiss="modal"
+          onclick="pVideoDir();"
+        >
+          <i class="fa fa-times"></i> Cerrar
+        </button>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- Modal Video Introducción -->
+<div
+  id="ModalVideoIntroduccion"
+  data-backdrop="static"
+  data-keyboard="false"
+  class="modal fade"
+  role="dialog"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-hidden="true"
+          onclick="hideModalIntroduccion();"
+        >
+          &times;
+        </button>
+        <h4 class="modal-title">
+          .: Video de introducción - Escuela de Ingenieros Militares del Ejército de Colombia ESING :.
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div class="video-container">
+          <video id="vidIntroduc" controls>
+            <source src="./assets/video/docente.mp4" type="video/mp4" />
+            Su navegador no soporta videos
+          </video>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-danger btn-circle"
+          data-dismiss="modal"
+          onclick="hideModalIntroduccion();"
+        >
+          <i class="fa fa-times"></i> Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
     <!-- fin modal video introduccion -->
-    <script
-      type="text/javascript"
-      src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"
-    ></script>
-    <script src="assets/dist/js/fixies/jquery-1.11.1.min.js"></script>
+     <script src="assets/dist/js/fixies/jquery-1.11.1.min.js"></script>
     <script src="assets/dist/js/fixies/jquery.flexslider-min.js"></script>
     <script src="assets/dist/js/fixies/jquery.nanoscroller.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -596,21 +598,59 @@
 
     <script src="./assets/dist/js/contenido.js"></script>
     <script>
-      introJs()
-        /* .setOption("dontShowAgain", true) */
-        .onbeforeexit(function () {
-          const lastClicked = document.activeElement;
-          if (
-            lastClicked?.classList.contains("introjs-donebutton") ||
-            lastClicked?.classList.contains("introjs-skipbutton")
-          ) {
-            $("#ModalVideoIntroduccion").modal();
-            $("#vidIntroduc").trigger("play");
-            return true;
-          }
-          return false;
+    const audioIntro = document.getElementById("audiointro1");
+
+introJs()
+  .setOptions({
+    nextLabel: "Siguiente",
+    prevLabel: "Anterior",
+    doneLabel: "Listo",
+    dontShowAgain: true,
+    dontShowAgainLabel: "No mostrar esto nuevamente",
+    dontShowAgainCookie: "Cookie_ESING_Intro_Resistencia_Materiales",
+    exitOnOverlayClick: false,
+    exitOnEsc: false,
+    disableInteraction: true,
+  })
+  .onafterchange(() => {
+    if (audioIntro) {
+      audioIntro
+        .play()
+        .then(() => {
+          console.log("Audio reproduciéndose");
         })
-        .start();
+        .catch((error) => {
+          console.log("Error al reproducir el audio:", error);
+        });
+    }
+  })
+  .onbeforeexit(function () {
+    const lastClicked = document.activeElement;
+    if (
+      lastClicked?.classList.contains("introjs-donebutton") ||
+      lastClicked?.classList.contains("introjs-skipbutton")
+    ) {
+      $("#ModalVideoIntroduccion").modal();
+      $("#vidIntroduc").trigger("play");
+      return true;
+    }
+    return false;
+  })
+  // 🔹 Aquí detenemos el audio cuando se cierra la guía de IntroJs
+  .onexit(function () {
+    if (audioIntro && !audioIntro.paused) {
+      audioIntro.pause();
+      audioIntro.currentTime = 0; 
+      console.log("Audio de introducción detenido al cerrar la guía");
+    }
+
+    // Restaurar estado del botón si existe
+    if (typeof playButton !== "undefined" && typeof textAudio !== "undefined") {
+      playButton.innerHTML = '<i class="fa fa-play"></i>';
+      textAudio.innerHTML = "Reproducir audio";
+    }
+  })
+  .start();
     </script>
   </body>
 </html>
